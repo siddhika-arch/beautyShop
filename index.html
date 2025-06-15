@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta information for character set and responsive design -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Page title -->
+  <title>Beauty Shop - Product Page</title>
+
+  <!-- Link to external CSS stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top information bar with contact and promotional message -->
+  <header class="topBar">
+    <p>Call Us: +123-456-789 | Sign up and GET 20% OFF for your first order.</p>
+  </header>
+
+  <!-- Main navigation bar -->
+  <nav class="mainNav">
+    <!-- Brand logo -->
+    <div class="logo"><span>Beauty</span> Shop.</div>
+
+    <!-- Menu icon for mobile navigation toggle -->
+    <div class="menuToggle" onclick="toggleMenu()" id="menuToggle">☰</div>
+
+    <!-- Navigation links list -->
+    <ul id="navMenu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Skin Care</a></li>
+      <li><a href="#">Makeup</a></li>
+      <li><a href="#">Hair Care</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Blogs</a></li>
+    </ul>
+  </nav>
+  <section class="sectionProduct">
+    <div class="productContainer">
+      <div class="productBox">
+        
+        <!-- Product Image Section -->
+        <div class="productImages">
+          <div class="mainImageWrapper">
+            <!-- Main product image -->
+            <img class="productImage" id="mainImage" src="images/serum1.jpg" alt="SilkSkin Serum"/>
+          </div>
+        </div>
+  
+        <!-- Product Details Section -->
+        <div class="productDetails">
+          <!-- Product category label -->
+          <div class="categoryLabel">Skin Care</div>
+  
+          <!-- Product name and availability -->
+          <h2 class="productTitleMain">
+            SilkSkin Serum <span class="stockBadge">In Stock</span>
+          </h2>
+  
+          <!-- Product rating -->
+          <div class="rating">
+            <span class="stars">★★★★★</span>&nbsp;<span>4.8 (245 Review)</span>
+          </div>
+  
+          <!-- Price with original crossed out -->
+          <div class="price">
+            $48.00 <del>$60.00</del>
+          </div>
+  
+          <!-- Short product description -->
+          <p class="productDesc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          </p>
+  
+          <!-- Size/Volume Selection -->
+          <h4>Size/Volume</h4>
+          <div class="volumeSelector">
+            <div class="volumeOption active">30 ml</div>
+            <div class="volumeOption">60ml</div>
+            <div class="volumeOption">80ml</div>
+            <div class="volumeOption">100ml</div>
+          </div>
+  
+          <!-- Quantity Controls -->
+          <div class="qtyControls">
+            <button class="qtyBtn" id="decreaseQty">−</button>
+            <div class="qtyDisplay" id="qtyDisplay">4</div>
+            <button class="qtyBtn" id="increaseQty">+</button>
+          </div>
+  
+          <!-- Action Buttons -->
+          <div class="actions">
+            <button class="addToCartBtn">Add To Cart</button>
+            <button class="buyNowBtn">Buy Now</button>
+            <button class="wishlistBtn">♡</button>
+          </div>
+  
+          <!-- SKU and Tags -->
+          <div class="sku">SKU : GRFR85648HGJ</div>
+          <div class="tags">Tags : Skincare, Serums, Vitamin C</div>
+        </div>
+      </div>
+  
+      <!-- Product Tab Section -->
+      <div class="tabContainer">
+        <!-- Tab Navigation -->
+        <div class="tabs">
+          <a href="#" class="tab active" data-tab="description">Description</a>
+          <a href="#" class="tab" data-tab="info">Additional Information</a>
+          <a href="#" class="tab" data-tab="review">Review</a>
+          <div class="tabUnderline"></div>
+        </div>
+  
+        <!-- Tab Content: Description -->
+        <div class="tabContent active" id="description">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+        </div>
+  
+        <!-- Tab Content: Additional Info -->
+        <div class="tabContent" id="info">
+          <p>Here is some additional information about the product...</p>
+        </div>
+  
+        <!-- Tab Content: Review -->
+        <div class="tabContent" id="review">
+          <p>No reviews yet. Be the first to review this product!...</p>
+        </div>
+  
+        <!-- Accordion: Terms & Conditions -->
+        <div class="accordion">
+          <div class="accordionHeader" id="accordionToggle">
+            Terms & Conditions
+            <span class="icon" id="accordionIcon">+</span>
+          </div>
+          <div class="accordionContent" id="accordionContent">
+            <p>By accessing this website, you agree to be bound by these Terms and Conditions...</p>
+            <p>You are not permitted to misuse the content or engage in any harmful activity...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Related Products Section -->
+  <section class="sectionWrapper">
+    <div class="curve">
+      <div class="bottom_curve"></div>
+    </div>
+  
+    <div class="slidContainer">
+      <!-- Section Title -->
+      <h2 class="sectionTitle">Explore <span class="highlight">Related Products</span></h2>
+  
+      <!-- Product Slider -->
+      <div class="sliderWrapper">
+        <!-- Navigation Buttons -->
+        <button class="sliderBtn prevBtn">&#10094;</button>
+        <div class="sliderTrack" id="slider">
+  
+          <!-- Individual Product Card -->
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum1.jpg" alt="SilkSculpt Serum" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">SilkSculpt Serum</h4>
+              <p class="productPrice">$35.00 <del>$70.00</del></p>
+            </div>
+          </div>
+  
+          <!-- More Product Cards (repeating pattern) -->
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum2.jpg" alt="HydraLuxe Serum" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">HydraLuxe Serum</h4>
+              <p class="productPrice">$20.00 <del>$40.00</del></p>
+            </div>
+          </div>
+  
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum3.jpg" alt="OceanMist Moisturizer" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">OceanMist Moisturizer</h4>
+              <p class="productPrice">$20.00 <del>$40.00</del></p>
+            </div>
+          </div>
+  
+          <!-- Repeat: More of same cards -->
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum1.jpg" alt="SilkSculpt Serum" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">SilkSculpt Serum</h4>
+              <p class="productPrice">$35.00 <del>$70.00</del></p>
+            </div>
+          </div>
+  
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum2.jpg" alt="HydraLuxe Serum" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">HydraLuxe Serum</h4>
+              <p class="productPrice">$20.00 <del>$40.00</del></p>
+            </div>
+          </div>
+  
+          <div class="productCard">
+            <div class="discountBadge">50% off</div>
+            <img class="imgSrc" src="images/serum3.jpg" alt="OceanMist Moisturizer" />
+            <div class="productDetails">
+              <small>Skin Care</small>
+              <h4 class="productTitle">OceanMist Moisturizer</h4>
+              <p class="productPrice">$20.00 <del>$40.00</del></p>
+            </div>
+          </div>
+        </div>
+        <button class="sliderBtn nextBtn">&#10095;</button>
+      </div>
+  
+      <!-- Service Features Section -->
+      <div class="featureGrid">
+        <!-- Feature Item: Free Shipping -->
+        <div class="featureItem">
+          <img src="images/shipping-icon.png" alt="Free Shipping" width="40" />
+          <h4 class="featureTitle">Free Shipping</h4>
+          <p class="featureDesc">Free shipping for order above $50</p>
+        </div>
+  
+        <!-- Feature Item: Flexible Payment -->
+        <div class="featureItem">
+          <img src="images/payment-icon.png" alt="Flexible Payment" width="40" />
+          <h4 class="featureTitle">Flexible Payment</h4>
+          <p class="featureDesc">Multiple secure payment options</p>
+        </div>
+  
+        <!-- Feature Item: 24×7 Support -->
+        <div class="featureItem">
+          <img src="images/support-icon.png" alt="24x7 Support" width="40" />
+          <h4 class="featureTitle">24×7 Support</h4>
+          <p class="featureDesc">We support online all days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Newsletter Section -->
+<section class="newsletterSection">
+  <!-- Newsletter Heading -->
+  <h3>Our Newsletter</h3>
+  <h2>Subscribe to Our Newsletter to <br> Get <span>Updates on Our Latest Offers</span></h2>
+  <p>Get 25% off on your first order just by subscribing to our newsletter</p>
+
+  <!-- Newsletter Subscription Form -->
+  <form class="newsletterForm">
+    <input type="email" placeholder="Enter Email Address" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="siteFooter">
+  <!-- Footer Content Columns -->
+  <div class="footerColumns">
+
+    <!-- Column: Brand Info -->
+    <div class="column">
+      <h4>Beauty Shop.</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+    </div>
+
+    <!-- Column: Company Links -->
+    <div class="column">
+      <h4>Company</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Blogs</li>
+        <li>Contact Us</li>
+        <li>Career</li>
+      </ul>
+    </div>
+
+    <!-- Column: Customer Service Links -->
+    <div class="column">
+      <h4>Customer Services</h4>
+      <ul>
+        <li>My Account</li>
+        <li>Track Your Order</li>
+        <li>Return</li>
+        <li>FAQ</li>
+      </ul>
+    </div>
+
+    <!-- Column: Policy Information -->
+    <div class="column">
+      <h4>Our Information</h4>
+      <ul>
+        <li>Privacy</li>
+        <li>User Terms & Condition</li>
+        <li>Return Policy</li>
+      </ul>
+    </div>
+
+    <!-- Column: Contact Information -->
+    <div class="column">
+      <h4>Contact Info</h4>
+      <ul>
+        <li>+0123-456-789</li>
+        <li>example@gmail.com</li>
+        <li>8502 Preston Rd. Inglewood, Maine 98380</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Footer Bottom Text -->
+  <div class="footerBottom">
+    <p>Copyright © 2025 <strong>Beauty Shop Website</strong>. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Main Script -->
+<script src="script.js"></script>
+</body>
+</html>
